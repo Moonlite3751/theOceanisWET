@@ -85,10 +85,9 @@ jobs:
     - name: Integration Step 1 - Seed Data via API
       run: |
         echo "Posting a new chicken payload to the database..."
-        curl -X POST http://localhost:8080/api/Chicken \
-        -H "Content-Type: application/json" \ 
-        -d '{"name": "Cluck Norris", "age": 2, "breed": "Rhode Island Red", "eggProduction": 5.0, "isPregnant": 0, "lastVetCheck": "2023-01-01"}' \
-        --fail --verbose
+        curl --fail --verbose -X POST "http://localhost:8080/api/Chicken" \
+          -H "Content-Type: application/json" \
+          --data-raw '{"name":"Cluck Norris","age":2,"breed":"Rhode Island Red","eggProduction":5.0,"isPregnant":0,"lastVetCheck":"2023-01-01"}'
 
     - name: Integration Step 2 - Verify Front-End MVC Data Rendering
       run: |
