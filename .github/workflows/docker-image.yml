@@ -72,9 +72,9 @@ jobs:
       run: docker compose up --build -d
 
     - name: Grace Period for Database Boot
-      run:
+      run: |
         echo "Giving Microsoft SQL Server time to initialize..."
-        sleep 25
+        sleep 60
       
     - name: Wait for API Readiness
       run: |
