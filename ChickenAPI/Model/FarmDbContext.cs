@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ChickenAPI.Model
 {
-    public class FarmDbContext :DbContext
+    public class FarmDbContext : DbContext
     {
         public DbSet<Chicken> Chicken { get; set; }
 

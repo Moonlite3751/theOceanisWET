@@ -35,7 +35,7 @@ namespace ChickenAPI.Controllers
             var chicken = await _context.Chicken.FindAsync(id);
             if (chicken == null)
                 return NotFound();
-            
+
             return chicken;
         }
 
@@ -64,7 +64,7 @@ namespace ChickenAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if(!_context.Chicken.Any(e => e.ChickID == id))
+                if (!_context.Chicken.Any(e => e.ChickID == id))
                     return NotFound();
                 throw;
             }

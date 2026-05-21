@@ -12,7 +12,7 @@ namespace ChickenAPI.Controllers
     [Route("api/[controller]")]
     public class EggController : Controller
     {
-      
+
         [HttpGet("/GetMeEggs")]
         public IActionResult GetEggs()
         {

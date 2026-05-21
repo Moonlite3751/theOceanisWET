@@ -19,7 +19,7 @@ namespace ChickenAPI
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
             var app = builder.Build();
-            if(true)
+            if (true)
             {
                 app.MapOpenApi();
                 app.UseSwaggerUI(options =>
